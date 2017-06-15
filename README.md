@@ -28,7 +28,7 @@ Examples
 
 ```yaml
 ---
-- name: role.sqlserver-client role 
+- name: cns.sqlserver-client role 
   hosts: dbservers
   sudo: yes
   roles: 
