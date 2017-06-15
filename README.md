@@ -29,7 +29,7 @@ Examples
 ```yaml
 ---
 - name: cns.sqlserver-client role 
-  hosts: dbservers
+  hosts: dbclient
   sudo: yes
   roles: 
   - cns.sqlserver-client
