@@ -1,4 +1,4 @@
-Role: cns.sqlserver-client
+Role: cnstechnicalgroup.sqlserver-client
 ========
 
 Ansible role install sqlcmd
@@ -28,11 +28,11 @@ Examples
 
 ```yaml
 ---
-- name: cns.sqlserver-client role 
+- name: cnstechnicalgroup.sqlserver-client role 
   hosts: dbclients
   sudo: yes
   roles: 
-  - cns.sqlserver-client
+  - cnstechnicalgroup.sqlserver-client
   gather_facts: no
 
 ```
