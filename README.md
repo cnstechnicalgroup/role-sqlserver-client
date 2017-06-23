@@ -36,5 +36,6 @@ Examples
   gather_facts: no
   environment:
     target_home: "{{target_home}}"
+    ACCEPT_EULA: "Y"
 
 ```
