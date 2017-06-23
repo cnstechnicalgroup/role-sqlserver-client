@@ -24,7 +24,8 @@
     state: present
 
 
-- shell: which sqlcmd
+- name: test sqlcmd was installed and can be found in path
+  shell: which sqlcmd
   register: cmd_result
   when: testing is defined
 
