@@ -15,12 +15,6 @@
 - name: Install msodbcsql
   yum: name=msodbcsql state=present
 
-- name: Initial setup of sql server
-  shell: expect -c 'spawn /usr/bin/yum -y install mssql-tools; expect "Do you accept the license terms? (Enter YES or NO)"; send "YES\n"; expect completed; interact'
-  ignore_errors: true
-  register: res
-
-
 - name: add path to sqlcmd
   lineinfile:
     path: "{{ target_home }}/.bash_profile"
