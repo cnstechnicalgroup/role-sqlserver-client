@@ -1,2 +1,2 @@
 ---
-target_home: "{{ ansible_env.HOME}}"
+target_home: "{{ lookup('env','HOME') }}"
