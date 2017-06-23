@@ -34,5 +34,7 @@ Examples
   roles: 
   - cnstechnicalgroup.sqlserver-client
   gather_facts: no
+  environment:
+    target_user: "{{target_user}}"
 
 ```

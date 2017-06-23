@@ -20,7 +20,7 @@
 
 - name: add path to sqlcmd
   lineinfile:
-    path: /home/vagrant/.bash_profile
+    path: /home/{{ target_user }}/.bash_profile
     line: PATH=$PATH:/opt/mssql-tools/bin
     insertbefore: '^export\ PATH'
     state: present
