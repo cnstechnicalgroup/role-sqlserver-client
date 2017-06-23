@@ -35,6 +35,6 @@ Examples
   - cnstechnicalgroup.sqlserver-client
   gather_facts: no
   environment:
-    target_user: "{{target_user}}"
+    target_home: "{{target_home}}"
 
 ```
