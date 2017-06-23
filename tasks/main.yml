@@ -28,3 +28,13 @@
     insertbefore: '^export\ PATH'
     create: true
     state: present
+
+
+- shell: which sqlcmd
+  register: cmd_result
+  when: testing is defined
+
+- assert:
+    that:
+     - "'/opt/mssql-tools/bin/sqlcmd' in cmd_result.stdout"
+  when: testing is defined
