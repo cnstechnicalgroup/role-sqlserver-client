@@ -30,7 +30,7 @@ Examples
 ---
 - name: cnstechnicalgroup.sqlserver-client role 
   hosts: dbclients
-  sudo: yes
+  sudo: no
   roles: 
   - cnstechnicalgroup.sqlserver-client
   gather_facts: no

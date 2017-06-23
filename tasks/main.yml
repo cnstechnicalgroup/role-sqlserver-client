@@ -1,19 +1,25 @@
 ---
 - name: Add mssql tools repository
   yum_repository:
-    name: packages-microsoft-com-prod 
+    name: packages-microsoft-com-prod
     description: packages-microsoft-com-prod
     baseurl: https://packages.microsoft.com/rhel/7/prod/
     enabled: yes
     gpgkey: https://packages.microsoft.com/keys/microsoft.asc
     gpgcheck: yes
   notify: yum-clean-metadata
+  become: true
+  become_user: root
 
 - name: Install mssql-tools
   yum: name=mssql-tools state=present
+  become: true
+  become_user: root
 
 - name: Install msodbcsql
   yum: name=msodbcsql state=present
+  become: true
+  become_user: root
 
 - name: add path to sqlcmd
   lineinfile:
@@ -28,8 +34,10 @@
   shell: which sqlcmd
   register: cmd_result
   when: testing is defined
+  delegate_to: localhost
 
 - assert:
     that:
      - "'/opt/mssql-tools/bin/sqlcmd' in cmd_result.stdout"
   when: testing is defined
+
