@@ -35,7 +35,7 @@ Examples
   sudo: no
   roles: 
   - cnstechnicalgroup.sqlserver-client
-  gather_facts: no
+  gather_facts: yes
   environment:
     target_home: "{{target_home}}"
     ACCEPT_EULA: "Y"
